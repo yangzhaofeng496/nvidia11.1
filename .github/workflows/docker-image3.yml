@@ -16,6 +16,6 @@ jobs:
     
     - name: 推送到阿里云
       run: |
-        sudo docker login --username=${{secrets.ALI_USERNAME}} registry.cn-shanghai.aliyuncs.com --password=${{secrets.ALI_PASSWORD}}
+        sudo docker login --username=Mr_yang registry.cn-shanghai.aliyuncs.com --password=13005446052Yzf
         sudo docker tag yangzhaofeng/d345i_record:1.0.0 registry.cn-shanghai.aliyuncs.com/d345i/d345i:1.0.0
         sudo docker push registry.cn-shanghai.aliyuncs.com/d345i/d345i:1.0.0
