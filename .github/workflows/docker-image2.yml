@@ -17,5 +17,5 @@ jobs:
     - name: 推送到阿里云
       run: |
         sudo docker login --username=Mr_yang registry.cn-shanghai.aliyuncs.com --password=13005446052Yzf
-        sudo docker tag yangzhaofeng/d345i_record:1.0.0 registry.cn-shanghai.aliyuncs.com/fast-lio-sam/fast-lio-sam:latest
+        sudo docker tag yangzhaofeng/fast-lio-sam:latest registry.cn-shanghai.aliyuncs.com/fast-lio-sam/fast-lio-sam:1.0.0
         sudo docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/fast-lio-sam:1.0.0
