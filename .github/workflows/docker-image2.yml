@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: 从dockerHub拉取镜像
-      run: sudo docker push yangzhaofeng/fast-lio-sam:latest
+      run: sudo docker pull yangzhaofeng/fast-lio-sam:latest
 
     - name: 推送到阿里云
       run: |
