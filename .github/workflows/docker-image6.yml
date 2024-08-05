@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: 从dockerHub拉取镜像
+      run: sudo docker pull nvcr.io/nvidia/pytorch:21.08-py3
+
+    - name: 推送到阿里云
+      run: |
+        sudo docker login --username=Mr_yang registry.cn-shanghai.aliyuncs.com --password=13005446052Yzf
+        sudo docker tag nvcr.io/nvidia/pytorch:21.08-py3 registry.cn-shanghai.aliyuncs.com/fast-lio-sam/yolov7:1.0.0
+        sudo docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/yolov7:1.0.0
