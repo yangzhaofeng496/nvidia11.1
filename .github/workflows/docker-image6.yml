@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: 从dockerHub拉取镜像
-      run: sudo docker pytorch/manylinux-cuda92:latest
+      run: sudo docker pull pytorch/manylinux-cuda92:latest
 
     - name: 推送到阿里云
       run: |
