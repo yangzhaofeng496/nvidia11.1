@@ -12,10 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: 从dockerHub拉取镜像
-      run: sudo docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu16.04
+      run: sudo docker pytorch/manylinux-cuda92:latest
 
     - name: 推送到阿里云
       run: |
         sudo docker login --username=Mr_yang registry.cn-shanghai.aliyuncs.com --password=13005446052Yzf
-        sudo docker tag nvidia/cuda:10.0-cudnn7-devel-ubuntu16.04 registry.cn-shanghai.aliyuncs.com/fast-lio-sam/yolov7:1.0.0
-        sudo docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/nvidia
+        sudo docker tag pytorch/manylinux-cuda92:latest registry.cn-shanghai.aliyuncs.com/fast-lio-sam/yolov7:1.0.0
+        sudo docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/pytorch/manylinux-cuda92:latest
