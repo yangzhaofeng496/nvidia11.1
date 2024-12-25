@@ -17,5 +17,5 @@ jobs:
     - name: 推送到阿里云
       run: |
         sudo docker login --username=Mr_yang registry.cn-shanghai.aliyuncs.com --password=13005446052Yzf
-        sudo docker tag pytorch/manylinux-cuda92:latest registry.cn-shanghai.aliyuncs.com/fast-lio-sam/yolov7:1.0.0
-        sudo docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/pytorch/manylinux-cuda92:latest
+        sudo docker tag pytorch/manylinux-cuda92:latest registry.cn-shanghai.aliyuncs.com/fast-lio-sam/pytorch-cuda9:1.0.0
+        docker push registry.cn-shanghai.aliyuncs.com/fast-lio-sam/pytorch-cuda9:1.0.0
